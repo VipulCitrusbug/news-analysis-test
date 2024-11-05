@@ -45,8 +45,6 @@ def newsapi_process_data(data):
             "date": item.get("dateTimePub", ""),
         }
 
-        print("Processed item:", processed_item)
-
         # Only append if all required fields have content
         if processed_item["title"] and processed_item["content"]:
             processed_data.append(processed_item)

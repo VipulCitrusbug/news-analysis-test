@@ -16,7 +16,6 @@ def get_article_list_from_news_api(keywords: List[str] = list(), maxItems: int =
     if os.path.exists(file_path):
         with open(file_path, "r") as file:
             existing_data = json.load(file)
-            print("Returning existing data from file.")
             return existing_data
 
     q = QueryArticlesIter(
@@ -29,7 +28,5 @@ def get_article_list_from_news_api(keywords: List[str] = list(), maxItems: int =
     # Save to JSON file
     with open(file_path, "w") as file:
         json.dump(article_list, file, indent=4)
-
-    print("New data saved to file.")
 
     return article_list

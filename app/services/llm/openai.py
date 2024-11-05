@@ -71,5 +71,4 @@ def generate_news_analysis(news_title, news_content, news_datetime):
         return formatted_response
 
     except Exception as e:
-        print("An error occurred while processing the response:", e)
         raise e

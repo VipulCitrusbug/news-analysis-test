@@ -32,8 +32,6 @@ async def analyze_news(keywords: str):
         processed_data = newsapi_process_data(news_list)
         newsapi_save_filtered_data(processed_data)
 
-        print("Processed data:", processed_data)
-
         if processed_data:
             result = generate_news_analysis(
                 news_title=processed_data[0]["title"],
@@ -45,7 +43,6 @@ async def analyze_news(keywords: str):
             ).response()
 
     except Exception as e:
-        print(e.__traceback__.tb_lineno)
         return CustomResponse(
             status_code=status.HTTP_400_BAD_REQUEST, message="Error: " + str(e)
         ).response()
