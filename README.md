@@ -8,6 +8,7 @@ This project provides a simple API using FastAPI to fetch news articles based on
 2. Install the required packages using `pip install -r requirements.txt`.
 3. Set the environment variables `NEWSAPI_API_KEY`, `DEFAULT_OPENAI_MODEL`, and `OPENAI_API_KEY` with your API keys.
 4. Run the application using `uvicorn app.main:app --reload`.
+5. Open the swagger UI at http://localhost:8000/docs to view the API endpoints.
 
 ## API Endpoints
 
